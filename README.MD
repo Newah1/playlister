@@ -4,7 +4,7 @@ A command line tool for downloading all of the songs in your playlist from YouTu
 
 ## Getting Started
 
-You'll need a developer account with Spotify, which is free and easy to sign up for. https://www.spotify.com/us/account/apps/
+You'll need a developer account with Spotify, which is free and easy to sign up for. https://developer.spotify.com/dashboard/login
 
 You'll also need a copy of [ffmpeg](https://www.ffmpeg.org/), and will need to point to it from the config file.
 
