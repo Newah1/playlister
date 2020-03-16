@@ -1,6 +1,6 @@
 # Playlister for Spotify
 
-A command line tool for downloading all of the songs in your playlist from YouTube.
+A command line tool for downloading all of the songs in your Spotify playlist or saved tracks to MP3. Uses YouTube to search for the track and download.
 
 ## Getting Started
 
