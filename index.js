@@ -194,9 +194,14 @@ callback = function () {
         if (should_continue.confirm) {
             async function loop_download() {
                 for (let track of tracks) {
+                    console.log(track.track.name + " " + track.track.artists[0].name);
                     yts(track.track.name + " " + track.track.artists[0].name, function (err, results) {
-                        if(err) return;
+                        if(err) {
+                            console.log(err);
+                            return false;
+                        };
                         if (results) {
+                            console.log(results);
 
                             try {
                                 const videos = results.videos;
@@ -206,7 +211,7 @@ callback = function () {
                                     if (title.length === 0) {
                                         title = new Date().getTime();
                                     }
-                                    YD.download(id, sanitize((title + '.mp3')));
+                                    return YD.download(id, sanitize((title + '.mp3')));
                                 }
                             } catch (err) {
 
@@ -214,11 +219,14 @@ callback = function () {
                         }
                     });
                 }
+                return true;
             }
 
             return loop_download();
         } else {
             console.log("Done.");
         }
+    }).then(message => {
+        console.log('all done!');
     });
 };
