@@ -1,0 +1,12 @@
+{
+  "port": "8080",
+  "spotify": {
+    "clientID" : "CLIENT_ID_HERE",
+    "clientSecret" : "CLIENT_SECRET_HERE",
+    "redirectUri" : "http://localhost:8080/callback"
+  },
+  "youtube": {
+    "download_path": "mp3/",
+    "ffmpeg_path": "/usr/bin/ffmpeg"
+  }
+}
